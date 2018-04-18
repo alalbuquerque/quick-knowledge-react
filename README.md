@@ -12,6 +12,13 @@ ReactDOM.render(
 ```
 
 ## Referência
+* [cloneElement()](#cloneelement)
+* [createElement()](#createelement)
+* [isValidElement()](#isvalidelement)
+* [React.Children](#reactchildren)
+* [React.Component](#reactcomponent)
+* [React.Fragment](#reactfragment)
+* [React.PureComponent](#reactpurecomponent)
 
 ## cloneElement()
 Clone e retorne ao novo elemento React usando o elemento no ponto inicial. O elemento resultante terá os suportes originais com os novos suportes mesclados superficialmente. Novas crianças substituirão as crianças existentes. `key` e `ref` do elemento original serão preservados.
