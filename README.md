@@ -101,5 +101,42 @@ React.Children.toArray(children)
 ```
 
 ### React.Component
+É a classe base dos componentes do React quando eles são definidos usando classes ES6:
+
+`React.Component` é uma classe base abstrata, por isso raramente faz sentido se referir diretamente ao React.Component. Em vez disso, você normalmente subclasse-o e define pelo menos um método `render()`.
+```js
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+#### Lifecycle do componente
+São métodos prefixados com `will` são chamados logo antes de algo acontecer, e os métodos prefixados com `did` são chamados logo após algo acontecer.
+
+##### Mounting
+Esses métodos são chamados quando uma instância de um componente está sendo criada e inserida no DOM:
+* constructor()
+* componentWillMount()
+* render()
+* componentDidMount()
+
+##### Updating
+Uma atualização pode ser causada por alterações em `props` ou `state`. Esses métodos são chamados quando um componente está sendo renderizado novamente:
+* componentWillReceiveProps()
+* shouldComponentUpdate()
+* componentWillUpdate()
+* render()
+* componentDidUpdate()
+
+##### Unmounting
+Esse método é chamado quando um componente é removido do DOM
+* componentWillUnmount()
+
+##### Error Handling
+Esse método é chamado e quando dá erro durante a renderização, no lifecycle do método, ou no `construtor` do filho do componente.
+*componentDidCatch()
+
 ### React.Fragment
 ### React.PureComponent
