@@ -10,3 +10,21 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
+## Referência
+
+### cloneElement()
+### createElement()
+### createFactory()
+### isValidElement()
+
+### React.Children
+#### React.Children.count
+#### React.Children.forEach
+#### React.Children.map
+#### React.Children.only
+#### React.Children.toArray
+
+### React.Component
+### React.Fragment
+### React.PureComponent
