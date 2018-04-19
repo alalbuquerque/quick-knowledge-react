@@ -1,15 +1,5 @@
 # Quick knowledge React
-
-React é uma biblioteca pra contrução de interfaces de usuários
-
-Exemplo de renderização de componente react dentro do HTML:
-
-```js
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-);
-```
+React é uma biblioteca pra construção de interfaces
 
 ## Referência
 * [cloneElement()](#cloneelement)
@@ -17,11 +7,36 @@ ReactDOM.render(
 * [isValidElement()](#isvalidelement)
 * [React.Children](#reactchildren)
 * [React.Component](#reactcomponent)
+componentDidCatch()
+componentDidMount()
+componentDidUpdate()
+componentWillMount()
+componentWillReceiveProps()
+componentWillUnmount()
+componentWillUpdate()
+constructor()
+defaultProps
+displayName
+forceUpdate()
+props
+render()
+setState()
+shouldComponentUpdate()
+state
 * [React.Fragment](#reactfragment)
 * [React.PureComponent](#reactpurecomponent)
 
+# Renderização de componentes react
+Exemplo de renderização de componente react dentro do HTML:
+```js
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+```
+
 ## cloneElement()
-Clone e retorne ao novo elemento React usando o elemento no ponto inicial. O elemento resultante terá os suportes originais com os novos suportes mesclados superficialmente. Novas crianças substituirão as crianças existentes. `key` e `ref` do elemento original serão preservados.
+Clone e retorne o elemento React usando o elemento no ponto inicial. O elemento resultante terá os suportes originais. Novos filhos substituirão os filhos existentes. `key` e `ref` do elemento original serão preservados.
 ```js
 React.cloneElement(
   element,
@@ -31,7 +46,7 @@ React.cloneElement(
 ```
 
 ## createElement()
-Crie e retorne um novo elemento React do tipo especificado. O argumento type pode ser uma string de nome de tag (como `<div>` ou `span`), um tipo de componente React (uma classe ou uma função) ou um tipo de `React.Fragment`.
+Crie e retorne um novo elemento React do tipo especificado. O argumento `type` pode ser uma string de nome de tag (como `<div>` ou `<span>`), um tipo de componente React (uma classe ou uma função) ou um tipo de `React.Fragment`.
 
 Você normalmente não chamará `React.createElement()` diretamente se estiver usando o JSX.
 ```js
@@ -40,7 +55,7 @@ React.createElement(
   [props],
   [...children]
 )
-//with
+//with JSX
 class Hello extends React.Component {
   render() {
     return <div>Hello {this.props.toWhat}</div>;
@@ -53,7 +68,7 @@ ReactDOM.render(
 );
 
 
-//without jsx
+//without JSX
 class Hello extends React.Component {
   render() {
     return React.createElement('div', null, `Hello ${this.props.toWhat}`);
@@ -67,14 +82,13 @@ ReactDOM.render(
 ```
 
 ## isValidElement()
-Verifica se o objeto é um elemento React. Retorna verdadeiro ou falso.
+Verifica se o objeto é um elemento React. Retorna `true` ou `false`.
 ```js
 React.isValidElement(object)
 ```
 
 ## React.Children
 `React.Children` fornece utilitários para lidar com a estrutura de dados do `this.props.children`.
-
 ### React.Children.count
 Retorna o número total de componentes filhos.
 ```js
@@ -94,14 +108,12 @@ React.Children.map(children, function[(thisArg)])
 ```
 
 ### React.Children.only
-Verifica se `children` têm apenas um filho. Caso contrario retorna error.
+Verifica se `children` tem apenas um filho. Se não retornará `error`.
 ```js
 React.Children.only(children)
 ```
 
 ### React.Children.toArray
-Returns the children opaque data structure as a flat array with keys assigned to each child. Useful if you want to manipulate collections of children in your render methods, especially if you want to reorder or slice this.props.children before passing it down.
-
 Retorna `children` como um `array` com `keys` atribuídas a cada `child`. Serve para manipular coleções de `children` em seus métodos de `render`, especialmente se você quiser reordenar ou dividir `this.props.children`.
 ```js
 React.Children.toArray(children)
@@ -125,10 +137,27 @@ São métodos prefixados com `will` são chamados logo antes de algo acontecer, 
 #### Mounting
 Esses métodos são chamados quando uma instância de um componente está sendo criada e inserida no DOM:
 ##### constructor()
-##### componentWillMount()
-##### render()
-##### componentDidMount()
+O `constructor` no React é chamando antes do component ser montado. Quando geramos um constructor para um componente, você precisa chamar como `super(props)` antes de declarar alguma coisa. Diferente so `this.props`, que será `undefined` no `constructor` 
+```js 
+constructor(props) {
+  super(props);
+  this.state = {
+    color: props.initialColor
+  };
+}
+```
 
+##### componentWillMount()
+É chamando antes da montagem seja feita. É chamado antes do `render()`.
+```js
+componentWillMount()
+```
+
+##### render()
+
+
+##### componentDidMount()
+componentWillMount
 #### Updating
 Uma atualização pode ser causada por alterações em `props` ou `state`. Esses métodos são chamados quando um componente está sendo renderizado novamente:
 ##### componentWillReceiveProps()
