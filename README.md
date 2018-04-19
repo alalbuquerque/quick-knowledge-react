@@ -147,3 +147,65 @@ Esse método é chamado e quando dá erro durante a renderização, no lifecycle
 
 ### React.Fragment
 ### React.PureComponent
+
+
+React / Reference
+createPortal()
+DOM Elements
+findAllInRenderedTree()
+findDOMNode()
+findRenderedComponentWithType()
+findRenderedDOMComponentWithClass()
+findRenderedDOMComponentWithTag()
+Glossary of React Terms
+hydrate()
+isCompositeComponent()
+isCompositeComponentWithType()
+isDOMComponent()
+isElement()
+isElementOfType()
+JavaScript Environment Requirements
+mockComponent()
+props
+props.children
+React Top-Level API
+React.Component
+ReactDOM
+ReactDOMServer
+render()
+renderIntoDocument()
+renderToNodeStream()
+renderToStaticMarkup()
+renderToStaticNodeStream()
+renderToString()
+requestAnimationFrame
+scryRenderedComponentsWithType()
+scryRenderedDOMComponentsWithClass()
+scryRenderedDOMComponentsWithTag()
+Shallow Renderer
+shallowRenderer.getRenderOutput()
+shallowRenderer.render()
+Simulate
+state
+SyntheticEvent
+Test Renderer
+Test Utilities
+testInstance.children
+testInstance.find()
+testInstance.findAll()
+testInstance.findAllByProps()
+testInstance.findAllByType()
+testInstance.findByProps()
+testInstance.findByType()
+testInstance.instance
+testInstance.parent
+testInstance.props
+testInstance.type
+TestRenderer.create()
+testRenderer.getInstance()
+testRenderer.root
+testRenderer.toJSON()
+testRenderer.toTree()
+testRenderer.unmount()
+testRenderer.update()
+unmountComponentAtNode()
