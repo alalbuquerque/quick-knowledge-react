@@ -157,7 +157,6 @@ constructor(props) {
 ```js
 componentWillMount()
 ```
-
 ##### render()
 É chamado de forma obrigatória, ele examina `this.props` e `this.state` e retornar um dos seguintes tipos:
 
@@ -175,18 +174,20 @@ A função `render()` deve ser pura, o que significa que não modifica o estado 
 componentWillMount
 #### Updating
 Uma atualização pode ser causada por alterações em `props` ou `state`. Esses métodos são chamados quando um componente está sendo renderizado novamente:
+
 ##### componentWillReceiveProps()
 ##### shouldComponentUpdate()
 ##### componentWillUpdate()
-##### render()
 ##### componentDidUpdate()
 
 #### Unmounting
 Esse método é chamado quando um componente é removido do DOM
 ##### componentWillUnmount()
+///
 
 #### Error Handling
 Esse método é chamado e quando dá erro durante a renderização, no lifecycle do método, ou no `construtor` do filho do componente.
+
 ##### componentDidCatch()
 
 ### React.Fragment
