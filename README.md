@@ -165,11 +165,11 @@ componentWillMount()
 * `String` and `Number`;
 * Portais: Criado com ReactDOM.createPortal;
 * `null`: Não faz nada;
-* `Boolean`: Não faça nada. (Existe principalmente para suportar o teste de retorno && <Child /> padrão, onde o teste é booleano.)
+* `Boolean`: Não faça nada. (Existe principalmente para suportar o teste de `return && <Child />` padrão, onde o teste é booleano)
 
-Ao retornar null ou false, ReactDOM.findDOMNode (this) retornará null.
+Ao retornar `null` ou `false`, `ReactDOM.findDOMNode(this)` retornará `null`.
 
-A função render () deve ser pura, o que significa que não modifica o estado do componente, retorna o mesmo resultado toda vez que é invocado e não interage diretamente com o navegador. Se você precisar interagir com o navegador, execute seu trabalho no componentDidMount () ou nos outros métodos do ciclo de vida. Manter o render () pure torna os componentes mais fáceis de pensar.
+A função `render()` deve ser pura, o que significa que não modifica o estado do componente, retorna o mesmo resultado toda vez que é invocado e não interage diretamente com o navegador. Se você precisar interagir com o navegador, execute seu trabalho no `componentDidMount()` ou nos outros métodos do ciclo de vida. Manter o `render()` pure torna os componentes mais fáceis de pensar.
 
 ##### componentDidMount()
 componentWillMount
