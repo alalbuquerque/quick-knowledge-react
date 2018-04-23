@@ -1,5 +1,5 @@
 # Quick knowledge React
-React é uma biblioteca pra construção de interfaces
+React é uma biblioteca pra construção de interfaces usando javascript como base.
 
 ## Referência
 * [cloneElement()](#cloneelement)
