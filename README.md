@@ -244,6 +244,18 @@ componentWillUnmount() is invoked immediately before a component is unmounted an
 Esse método é chamado e quando dá erro durante a renderização, no lifecycle do método, ou no `construtor` do filho do componente.
 
 ##### componentDidCatch()
+```js
+componentDidCatch(error, info)
+```
+Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
+
+A class component becomes an error boundary if it defines this lifecycle method. Calling setState() in it lets you capture an unhandled JavaScript error in the below tree and display a fallback UI. Only use error boundaries for recovering from unexpected exceptions; don’t try to use them for control flow.
+
+For more details, see Error Handling in React 16.
+
+Note
+
+Error boundaries only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself.
 
 ### React.Fragment
 The React.Fragment component lets you return multiple elements in a render() method without creating an additional DOM element:
